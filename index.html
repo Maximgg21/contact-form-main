@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Contact form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="contact-form" action="">
+        <h1>Contact Us</h1>
+        <section class="flex-direction-row">
+          <div class="flex-direction-column">
+            <label for="first-name-input"
+              >First Name <span class="required-sign">*</span></label
+            >
+            <input
+              class="input-field"
+              id="first-name-input"
+              type="text"
+              name="firstName"
+              required
+            />
+            <p class="error-message">This field is required</p>
+          </div>
+          <div class="flex-direction-column">
+            <label for="last-name-input"
+              >Last Name <span class="required-sign">*</span></label
+            >
+            <input
+              class="input-field"
+              id="last-name-input"
+              type="text"
+              name="lastName"
+              required
+            />
+            <p class="error-message">This field is required</p>
+          </div>
+        </section>
+        <section>
+          <label for="email-input"
+            >Email Address <span class="required-sign">*</span></label
+          >
+          <input class="email-input input-field" id="email-input" type="email" name="email" required/>
+          <p class="error-message">Enter a valid email address</p>
+        </section>
+        <section>
+          <div>Query Type <span class="required-sign">*</span></div>
+          <div class="flex-direction-row">
+            <label class="radio-box" for="general-enquiry-radio">
+              <input
+                class="query-type-radio"
+                id="general-enquiry-radio"
+                type="radio"
+                name="query"
+                required
+              />
+              General Enquiry
+            </label>
+            
+            <label class="radio-box" for="support-request-radio">
+              <input
+                class="query-type-radio"
+                id="support-request-radio"
+                type="radio"
+                name="query"
+                required
+              />
+              Support Request
+            </label>
+          </div>
+          <p class="error-message">Please select a query type</p>
+        </section>
+        <section>
+          <label for="message-input"
+            >Message <span class="required-sign">*</span></label
+          >
+          <textarea class="message-input input-field cursor-pointer" name="message" required></textarea>
+          <p class="error-message">This field is required</p>
+        </section>
+        <section class="consent-container">
+          <div class="flex-direction-row">
+            <label class="cursor-pointer" for="consent-checkbox">
+              <input
+                class="consent-checkbox cursor-pointer"
+                id="consent-checkbox"
+                type="checkbox"
+                name="consent"
+                required
+              />
+              I consent to being contacted by the team
+              <span class="required-sign">*</span>
+            </label>
+          </div>
+          <p class="error-message">To submit this form, please consent to being contacted</p>
+        </section>
+        <button class="submit-btn cursor-pointer" id="submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Max</a>.
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

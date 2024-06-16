@@ -1,0 +1,171 @@
+:root {
+    /* ### Primary */
+
+    --light-green: hsl(148, 38%, 91%);
+    --green: hsl(169, 82%, 27%);
+    --dark-green: hsl(169, 82%, 17%);
+    --red: hsl(0, 66%, 56%);
+
+    /* ### Neutral */
+
+    --medium-grey: hsl(186, 15%, 59%);
+    --dark-grey: hsl(187, 24%, 22%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--dark-grey);
+    margin: 0;
+    background: var(--light-green);
+}
+
+/* Typography */
+
+h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.required-sign {
+    color: var(--green);
+    font-size: 1.2rem;
+}
+
+/* Modeling */
+
+.container {
+    width: 675px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+section,
+.flex-direction-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.flex-direction-column {
+    flex: 1;
+}
+
+.flex-direction-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.input-field,
+.radio-box,
+.message-input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--medium-grey);
+    padding: 15px 20px;
+    outline: none;
+    color: inherit;
+}
+
+.error-message {
+    display: none;
+    color: var(--red);
+    margin: 0;
+}
+
+/* .input-field:invalid {
+    border-color: var(--red);
+} */
+
+.message-input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.input-field:hover,
+.radio-box:hover,
+.message-input:hover,
+.input-field:focus,
+.radio-box:focus,
+.message-input:focus,
+.radio-box:has(input[type=radio]:checked) {
+    border-color: var(--green);
+    border-width: 1.3px;
+}
+
+.radio-box:has(input[type=radio]:checked) {
+    background: var(--light-green);
+}
+
+.consent-checkbox,
+.query-type-radio {
+    accent-color: var(--green);
+    margin: 0;
+    margin-right: 10px;
+}
+
+.input-field,
+.radio-box,
+.cursor-pointer {
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px 0;
+    border: none;
+    background: var(--green);
+    color: white;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--dark-green);
+}
+
+.message-input {
+    height: 100px;
+    resize: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 675px) {
+    .container {
+        width: auto;
+        margin: 50px 10px;
+    }
+
+    .flex-direction-row {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .message-input {
+        height: 200px;
+    }
+
+    .consent-form {
+        flex-direction: row;
+    }
+}
