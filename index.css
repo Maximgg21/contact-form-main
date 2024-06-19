@@ -138,6 +138,10 @@ button:hover {
     background-color: var(--dark-green);
 }
 
+input {
+    touch-action: manipulation;
+}
+
 .message-input {
     height: 100px;
     resize: none;
@@ -191,6 +195,10 @@ button:hover {
     .flex-direction-row {
         flex-direction: column;
         row-gap: 10px;
+    }
+
+    .message-sent-popup .flex-direction-row {
+        flex-direction: row;
     }
 
     .message-input {
