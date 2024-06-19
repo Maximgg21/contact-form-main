@@ -41,8 +41,8 @@ h1 {
 /* Modeling */
 
 .container {
-    width: 675px;
-    margin: 50px auto;
+    width: 750px;
+    margin: 105px auto;
     padding: 30px;
     background: white;
     border-radius: 20px;
@@ -69,7 +69,7 @@ section,
     column-gap: 10px;
 }
 
-.input-field,
+.input-text,
 .radio-box,
 .message-input {
     width: 100%;
@@ -86,7 +86,7 @@ section,
     margin: 0;
 }
 
-/* .input-field:invalid {
+/* .input-text:invalid {
     border-color: var(--red);
 } */
 
@@ -95,10 +95,10 @@ section,
     font-size: inherit;
 }
 
-.input-field:hover,
+.input-text:hover,
 .radio-box:hover,
 .message-input:hover,
-.input-field:focus,
+.input-text:focus,
 .radio-box:focus,
 .message-input:focus,
 .radio-box:has(input[type=radio]:checked) {
@@ -117,7 +117,7 @@ section,
     margin-right: 10px;
 }
 
-.input-field,
+.input-text,
 .radio-box,
 .cursor-pointer {
     cursor: pointer;
@@ -131,6 +131,7 @@ button {
     background: var(--green);
     color: white;
     font-size: 1rem;
+    touch-action: manipulation;
 }
 
 button:hover {
@@ -140,6 +141,32 @@ button:hover {
 .message-input {
     height: 100px;
     resize: none;
+}
+
+@keyframes fade-away {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.message-sent-popup {
+    visibility: hidden;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 475px;
+    background: var(--dark-green);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.message-sent-popup p {
+    margin: 0;
+    margin-top: 10px;
 }
 
 .attribution {
@@ -154,6 +181,11 @@ button:hover {
     .container {
         width: auto;
         margin: 50px 10px;
+    }
+
+    .message-sent-popup {
+        width: auto;
+        margin: 0 10px;
     }
 
     .flex-direction-row {
