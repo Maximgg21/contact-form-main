@@ -39,7 +39,6 @@ contactForm.addEventListener("submit", function(e) {
     if (isValid) {
         contactForm.reset();
         messageSentPopup.style.visibility = "visible";
-        window.scrollTo(0, 0);
         setTimeout(function() {
             messageSentPopup.style.animationName = "fade-away";
         }, 3000)
